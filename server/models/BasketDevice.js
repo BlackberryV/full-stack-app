@@ -1,8 +1,8 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const BasketDevice = new Schema({
-    deviceId: {type: Schema.Types.ObjectId, ref: 'Device'},
-    basketId: {type: Schema.Types.ObjectId, ref: 'Basket'},
+const BasketDevice = new mongoose.Schema({
+    deviceId: {type: mongoose.Schema.Types.ObjectId, ref: 'Device'},
+    basketId: {type: mongoose.Schema.Types.ObjectId, ref: 'Basket'},
 })
 
-export default model('BasketDevice', BasketDevice)
+export default mongoose.model('BasketDevice', BasketDevice)

@@ -1,9 +1,9 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const Rating = new Schema({
-    deviceId: {type: Schema.Types.ObjectId, ref: 'Device'},
-    userId: {type: Schema.Types.ObjectId, ref: 'User'},
+const Rating = new mongoose.Schema({
+    deviceId: {type: mongoose.Schema.Types.ObjectId, ref: 'Device'},
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     rate: {type: Number, required: true}
 })
 
-export default model('Rating', Rating)
+export default mongoose.model('Rating', Rating)

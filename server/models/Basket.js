@@ -1,7 +1,7 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const Basket = new Schema({
-    userId: {type: Schema.Types.ObjectId, ref: 'User'}
+const Basket = new mongoose.Schema({
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })
 
-export default model('Basket', Basket)
+export default mongoose.model('Basket', Basket)

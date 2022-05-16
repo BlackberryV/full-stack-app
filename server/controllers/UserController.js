@@ -40,7 +40,7 @@ class UserController {
             return next(ApiError.badRequest('Wrong password'))
         }
         const token = generateToken(user._id, email, user.role)
-        return res.json(token)
+        return res.json({token})
     }
 
     async check(req, res, next) {

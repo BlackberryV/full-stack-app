@@ -1,8 +1,8 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const TypeBrand = new Schema({
-    typeId: {type: Schema.Types.ObjectId, ref: 'Type'},
-    brandId: {type: Schema.Types.ObjectId, ref: 'Brand'},
+const TypeBrand = new mongoose.Schema({
+    typeId: {type: mongoose.Schema.Types.ObjectId, ref: 'Type'},
+    brandId: {type: mongoose.Schema.Types.ObjectId, ref: 'Brand'},
 })
 
-export default model('TypeBrand', TypeBrand)
+export default mongoose.model('TypeBrand', TypeBrand)

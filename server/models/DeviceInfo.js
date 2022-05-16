@@ -1,9 +1,9 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const DeviceInfo = new Schema({
+const DeviceInfo = new mongoose.Schema({
     title: {type: String, required: true},
     description: {type: String, required: true},
-    userId: {type: Schema.Types.ObjectId, ref: 'User'}
+    deviceId: {type: mongoose.Schema.Types.ObjectId, ref: 'Device'}
 })
 
-export default model('DeviceInfo', DeviceInfo)
+export default mongoose.model('DeviceInfo', DeviceInfo)
