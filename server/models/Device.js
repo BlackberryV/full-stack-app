@@ -1,6 +1,6 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const Device = new Schema({
+const Device = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -10,8 +10,10 @@ const Device = new Schema({
         type: Number,
         required: true
     },
-    rating: {},
-    images: [{type: String}],
-    typeId: {type: Schema.Types.ObjectId, ref: 'Types'},
-    brandId: {type: Schema.Types.ObjectId, ref: 'Brand'}
+    rating: {type: Number, default: 0},
+    image: {type: String},
+    typeId: {type: mongoose.Schema.Types.ObjectId, ref: 'Types'},
+    brandId: {type: mongoose.Schema.Types.ObjectId, ref: 'Brand'},
 })
+
+export default mongoose.model('Device', Device)

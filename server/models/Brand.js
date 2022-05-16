@@ -1,7 +1,7 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const Brand = new Schema({
+const Brand = new mongoose.Schema({
     name: {type: String}
-})
+}, {timestamps: true})
 
-export default model('Brand', Brand)
+export default mongoose.model('Brand', Brand)

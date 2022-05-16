@@ -1,7 +1,8 @@
-import {Schema, model} from "mongoose";
+import mongoose from "mongoose";
 
-const Type = new Schema({
-    name: {type: String}
-})
+const Type = new mongoose.Schema({
+        name: {type: String},
+    }, {timestamps: true}
+)
 
-export default model('Type', Type)
+export default mongoose.model('Type', Type)
