@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const Type = new mongoose.Schema({
-        name: {type: String},
+        name: {type: String, required: true},
     }, {timestamps: true}
 )
 
